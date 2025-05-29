@@ -1,14 +1,23 @@
-import { StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
-
-export default function TabOneScreen() {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+      <Text style={styles.title}>Welcome to StudyBuddy 👋</Text>
+      <Text style={styles.subtitle}>Match with students studying the same subjects near you.</Text>
+
+      <Link href="/(tabs)/swipe" asChild>
+        <Pressable style={styles.button}>
+          <Text style={styles.buttonText}>Start Swiping</Text>
+        </Pressable>
+      </Link>
+
+      <Link href="/(tabs)/matches" asChild>
+        <Pressable style={[styles.button, styles.secondaryButton]}>
+          <Text style={styles.buttonText}>View Matches</Text>
+        </Pressable>
+      </Link>
     </View>
   );
 }
@@ -16,16 +25,34 @@ export default function TabOneScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    padding: 24,
     justifyContent: 'center',
+    backgroundColor: '#fff',
   },
   title: {
-    fontSize: 20,
+    fontSize: 28,
     fontWeight: 'bold',
+    marginBottom: 12,
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  subtitle: {
+    fontSize: 16,
+    color: '#444',
+    marginBottom: 32,
+  },
+  button: {
+    backgroundColor: '#4F46E5',
+    padding: 14,
+    borderRadius: 10,
+    marginBottom: 16,
+    alignItems: 'center',
+  },
+  secondaryButton: {
+    backgroundColor: '#6366F1',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
+
