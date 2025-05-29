@@ -4,7 +4,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to StudyBuddy 👋</Text>
+      <Text style={styles.title}>Welcome to StudySync 👋</Text>
       <Text style={styles.subtitle}>Match with students studying the same subjects near you.</Text>
 
       <Link href="/(tabs)/swipe" asChild>
