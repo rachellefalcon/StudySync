@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 
+//Where you swipe.
 export default function SwipeScreen() {
   return (
     <View style={styles.container}>

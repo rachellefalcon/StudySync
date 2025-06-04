@@ -1,5 +1,6 @@
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 
+//Where you see all the matches(chats)
 const dummyMatches = [
   { id: '1', name: 'Alex Johnson' },
   { id: '2', name: 'Jamie Rivera' },
