@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+//Home Screen
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
